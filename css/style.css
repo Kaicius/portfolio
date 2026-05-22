@@ -1,14 +1,9 @@
-/* css/style.css */
-
-/* ==========================================================================
-   1. VARIÁVEIS DE CORES (Garante bom contraste WCAG) e CONFIGURAÇÕES GERAIS
-   ========================================================================== */
 :root {
     --bg-principal: #f8f9fa;
     --bg-card: #ffffff;
     --texto-escuro: #1a1a1a;
     --texto-mutado: #4a5568;
-    --cor-primaria: #0056b3; /* Azul com excelente taxa de contraste */
+    --cor-primaria: #0056b3;
     --cor-tag: #e2e8f0;
     --borda: #cbd5e0;
 }
@@ -27,17 +22,12 @@ body {
     padding: 0;
 }
 
-/* Visibilidade para navegação via teclado (Acessibilidade) */
+
 a:focus, button:focus {
     outline: 3px solid var(--cor-primaria);
     outline-offset: 2px;
 }
 
-/* ==========================================================================
-   2. ABORDAGEM MOBILE-FIRST (Estilos padrão para Celulares)
-   ========================================================================== */
-
-/* Cabeçalho e Menu */
 header {
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--borda);
@@ -49,7 +39,7 @@ header {
 
 header nav ul {
     list-style: none;
-    display: flex; /* Flexbox aplicado */
+    display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
@@ -62,7 +52,7 @@ header nav a {
     font-size: 1.1rem;
 }
 
-/* Estrutura do Conteúdo Principal */
+
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -82,7 +72,7 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
-/* Seção Perfil */
+
 .cargo {
     font-weight: bold;
     color: var(--cor-primaria);
@@ -94,9 +84,9 @@ h1, h2, h3 {
     color: var(--texto-mutado);
 }
 
-/* Seção Projetos (Layout de lista vertical no Mobile) */
+
 .grid-projetos {
-    display: flex; /* Mudando dinamicamente com Flexbox no Mobile */
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
@@ -135,7 +125,6 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-/* Seção Contato */
 #dados-contato ul {
     list-style: none;
 }
@@ -150,7 +139,7 @@ h1, h2, h3 {
     word-break: break-all;
 }
 
-/* Rodapé */
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -158,11 +147,8 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   3. MEDIA QUERIES (Responsividade para Telas Maiores / Tablets e Desktops)
-   ========================================================================== */
+
 @media (min-width: 768px) {
-    /* Menu passa a ser horizontal */
     header nav ul {
         flex-direction: row;
         justify-content: center;
@@ -177,9 +163,8 @@ footer {
         padding: 2.5rem;
     }
 
-    /* Transformando a lista de projetos em um Grid de duas colunas */
     .grid-projetos {
-        display: grid; /* Grid conceitual aplicado para telas maiores */
+        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
